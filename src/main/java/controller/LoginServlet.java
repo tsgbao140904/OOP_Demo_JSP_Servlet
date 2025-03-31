@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
         if (user != null) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            response.sendRedirect("dashboard.jsp"); // Chuyển hướng đến trang có ảnh
+            response.sendRedirect("dashboard.jsp");     // Chuyển hướng đến trang có ảnh
         } else {
             request.setAttribute("error", "Sai tài khoản hoặc mật khẩu!");
             request.getRequestDispatcher("login.jsp").forward(request, response);
